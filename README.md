@@ -1,4 +1,6 @@
 # LByteBuf
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FLangYa466%2FLByteBuf.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FLangYa466%2FLByteBuf?ref=badge_shield)
+
 
 # 轻量 高性能 Java ByteBuf 实现 支持零拷贝+自动扩容+读写指针分离+多数据类型序列化+对象池复用
 
@@ -25,3 +27,7 @@ System.out.println(buf.readFloat());
 System.out.println(buf.readDouble()); 
 System.out.println(buf.readChar());   
 System.out.println(buf.readObject()); 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FLangYa466%2FLByteBuf.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FLangYa466%2FLByteBuf?ref=badge_large)
