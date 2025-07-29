@@ -10,10 +10,10 @@ import java.util.List;
  * @date 2025/5/19
  */
 public class CompositeByteBuf implements ByteBuf {
-    private final List<ByteBuf> components;
-    private int readerIndex;
-    private int writerIndex;
-    private int totalCapacity;
+    public final List<ByteBuf> components;
+    public int readerIndex;
+    public int writerIndex;
+    public int totalCapacity;
 
     public CompositeByteBuf(ByteBuf... buffers) {
         this.components = new ArrayList<>();

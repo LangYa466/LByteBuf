@@ -8,9 +8,9 @@ import java.nio.charset.StandardCharsets;
  * @date 2025/5/19
  */
 public class UnpooledByteBuf implements ByteBuf {
-    protected byte[] buffer;
-    protected int readerIndex;
-    protected int writerIndex;
+    public byte[] buffer;
+    public int readerIndex;
+    public int writerIndex;
 
     public UnpooledByteBuf(int initialCapacity) {
         this.buffer = new byte[initialCapacity];

@@ -7,8 +7,8 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  * @date 2025/5/19
  */
 public class ByteBufPool {
-    private static final int DEFAULT_INITIAL_CAPACITY = 256;
-    private static final ConcurrentLinkedQueue<ByteBuf> pool = new ConcurrentLinkedQueue<>();
+    public static final int DEFAULT_INITIAL_CAPACITY = 256;
+    public static final ConcurrentLinkedQueue<ByteBuf> pool = new ConcurrentLinkedQueue<>();
 
     public static ByteBuf acquire() {
         ByteBuf buf = pool.poll();

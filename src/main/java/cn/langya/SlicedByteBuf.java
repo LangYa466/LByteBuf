@@ -5,9 +5,9 @@ package cn.langya;
  * @date 2025/5/19
  */
 public class SlicedByteBuf extends UnpooledByteBuf {
-    private final UnpooledByteBuf parent;
-    private final int offset;
-    private final int length;
+    public final UnpooledByteBuf parent;
+    public final int offset;
+    public final int length;
 
     public SlicedByteBuf(UnpooledByteBuf parent, int index, int length) {
         super(0); // 不实际分配内存
