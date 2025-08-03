@@ -51,6 +51,10 @@ public interface ByteBuf {
     ByteBuf writeChar(char value);
 
     char readChar();
+    
+    boolean readBoolean();
+    
+    ByteBuf writeBoolean(boolean value);
 
     ByteBuf writeString(String s);
 

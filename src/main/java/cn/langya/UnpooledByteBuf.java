@@ -167,6 +167,17 @@ public class UnpooledByteBuf implements ByteBuf {
     public char readChar() {
         return (char) (((buffer[readerIndex++] & 0xFF) << 8) | (buffer[readerIndex++] & 0xFF));
     }
+    
+    @Override
+    public boolean readBoolean() {
+        return readByte() != 0;
+    }
+    
+    @Override
+    public ByteBuf writeBoolean(boolean value) {
+        writeByte(value ? (byte) 1 : (byte) 0);
+        return this;
+    }
 
     @Override
     public ByteBuf writeString(String s) {

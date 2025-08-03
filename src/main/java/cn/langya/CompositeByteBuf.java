@@ -175,6 +175,17 @@ public class CompositeByteBuf implements ByteBuf {
     public char readChar() {
         return components.get(0).readChar();
     }
+    
+    @Override
+    public boolean readBoolean() {
+        return components.get(0).readBoolean();
+    }
+    
+    @Override
+    public ByteBuf writeBoolean(boolean value) {
+        components.get(0).writeBoolean(value);
+        return this;
+    }
 
     @Override
     public ByteBuf writeString(String s) {
