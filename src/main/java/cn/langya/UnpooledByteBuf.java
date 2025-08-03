@@ -93,6 +93,9 @@ public class UnpooledByteBuf implements ByteBuf {
 
     @Override
     public byte[] readBytes(int length) {
+        if (readerIndex + length > writerIndex) {
+            throw new IndexOutOfBoundsException("readBytes: Not enough readable bytes. Required: " + length + ", Available: " + (writerIndex - readerIndex));
+        }
         byte[] dst = new byte[length];
         System.arraycopy(buffer, readerIndex, dst, 0, length);
         readerIndex += length;
